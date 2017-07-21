@@ -1,10 +1,10 @@
 import { Component } from '@angular/core';
-import { NavController } from 'ionic-angular';
-import { MailUsPage } from '../mail-us-page/mail-us-page';
+import { NavController, IonicPage } from 'ionic-angular';
 
+@IonicPage()
 @Component({
   selector: 'page-contact',
-  templateUrl: 'contact.html'
+  templateUrl: 'contact-page.html'
 })
 export class ContactPage {
 
@@ -12,6 +12,6 @@ export class ContactPage {
 
   }
   mailUs(){
-  	this.navCtrl.push(MailUsPage);
+  	this.navCtrl.push("MailUsPage");
   }
 }

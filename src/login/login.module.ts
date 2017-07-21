@@ -1,19 +1,18 @@
 import { NgModule } from '@angular/core';
-import { IonicPageModule } from 'ionic-angular';
-import { LoginPage } from './pages/login-page/login-page';
-import { SignupPage } from './pages/signup-page/signup-page';
+import { LoginPageModule } from './pages/login-page/login-page.module';
+import { SignupPageModule } from './pages/signup-page/signup-page.module';
+import { AuthenticationProvider }  from "./providers/authentication-provider"
 
 @NgModule({
   declarations: [
-    LoginPage,
-    SignupPage,
   ],
+  providers: [AuthenticationProvider],
   imports: [
-    IonicPageModule.forChild(LoginPage),
-    IonicPageModule.forChild(SignupPage),
+    LoginPageModule,
+    SignupPageModule,
   ],
   exports: [
-    LoginPage
+    LoginPageModule
   ]
 })
 export class LoginModule {}

@@ -1,15 +1,14 @@
 import { Component } from '@angular/core';
+import { IonicPage } from 'ionic-angular';
 
-import { ContactPage } from '../contact/pages/contact-page/contact';
-import { HomePage } from '../home/pages/home/home';
-
+@IonicPage()
 @Component({
   templateUrl: 'tabs.html'
 })
-export class TabsPage {
+export class Tabs {
 
-  tab1Root = HomePage;
-  tab2Root = ContactPage;
+  tab1Root = "HomePage";
+  tab2Root = "ContactPage";
 
   constructor() {
 

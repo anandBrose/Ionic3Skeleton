@@ -5,15 +5,19 @@
   Ionic pages and navigation.
 -->
 <ion-header>
-
   <ion-navbar>
     <ion-title>login-page</ion-title>
   </ion-navbar>
-
 </ion-header>
-
-
 <ion-content padding>
-<button ion-button (click)="signIn()">Sign In</button>
-<button ion-button (click)="signUp()">Sign Up</button>
+  <ion-item>
+    <ion-label floating>Username</ion-label>
+    <ion-input #username type="text" value=""></ion-input>
+  </ion-item>
+  <ion-item padding-bottom>
+    <ion-label floating>Password</ion-label>
+    <ion-input #password type="password"></ion-input>
+  </ion-item>
+  <button ion-button block (click)="signIn(username, password)">Sign In</button>
+  <button ion-button clear block small padding-top (click)="signUp()">Sign Up</button>
 </ion-content>

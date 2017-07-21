@@ -1,20 +1,16 @@
 import { NgModule } from '@angular/core';
-import { IonicPageModule } from 'ionic-angular';
-import { MailUsPage } from './pages/mail-us-page/mail-us-page';
-import { ContactPage } from './pages/contact-page/contact';
+import { MailUsPageModule } from './pages/mail-us-page/mail-us-page.module';
+import { ContactPageModule } from './pages/contact-page/contact-page.module';
 
 @NgModule({
-  declarations: [
-    MailUsPage,
-    ContactPage
-  ],
+  declarations: [],
   imports: [
-    IonicPageModule.forChild(MailUsPage),
-    IonicPageModule.forChild(ContactPage)
+    MailUsPageModule,
+    ContactPageModule
   ],
   exports: [
-    MailUsPage,
-    ContactPage
+    MailUsPageModule,
+    ContactPageModule
   ]
 })
 export class ContactModule {}

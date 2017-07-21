@@ -1,22 +1,26 @@
 import { NgModule } from '@angular/core';
-import { IonicPageModule } from 'ionic-angular';
 import { LoginModule } from '../login/login.module'
 import { HomeModule } from '../home/home.module'
 import { ContactModule } from '../contact/contact.module'
+import { TabsModule } from '../tabs/tabs.module'
+import { UtilsProvider } from "./providers/utils.provider";
 
 
 @NgModule({
   declarations: [
   ],
+  providers:  [ UtilsProvider ],
   imports: [
   	LoginModule,
   	HomeModule,
-  	ContactModule
+  	ContactModule,
+    TabsModule
   ],
   exports: [
   	LoginModule,
   	HomeModule,
-  	ContactModule
+  	ContactModule,
+    TabsModule
   ]
 })
 export class CommonModule {}
